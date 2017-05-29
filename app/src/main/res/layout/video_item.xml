@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/main_video_container"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:foreground="@drawable/ripple_border"
+	>
+
+	<RelativeLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:padding="8dp"
+		>
+
+		<ProgressBar
+			android:id="@+id/image_progress"
+			android:layout_width="40dp"
+			android:layout_height="80dp"
+			android:layout_alignParentLeft="true"
+			android:layout_alignParentStart="true"
+			android:layout_alignParentTop="true"
+			android:layout_marginEnd="12dp"
+			android:layout_marginRight="12dp"
+			android:layout_marginStart="40dp"
+			/>
+
+		<ImageView
+			android:id="@+id/video_thumbnail"
+			android:layout_width="110dp"
+			android:layout_height="80dp"
+			android:layout_alignParentLeft="true"
+			android:layout_alignParentStart="true"
+			android:layout_alignParentTop="true"
+			android:layout_marginEnd="12dp"
+			android:layout_marginRight="12dp"
+			android:contentDescription="Video Thumbnail"
+			android:scaleType="fitXY"
+			android:src="@drawable/music_video"/>
+
+		<TextView
+			android:id="@+id/video_title"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignParentTop="true"
+			android:layout_toEndOf="@+id/video_thumbnail"
+			android:layout_toRightOf="@+id/video_thumbnail"
+			android:layout_toStartOf="@+id/video_options"
+			android:ellipsize="end"
+			android:fontFamily="sans-serif-bold"
+			android:maxLines="2"
+			android:text="Video Title"
+			android:textColor="#ddd"
+			android:textSize="16sp"
+			/>
+
+		<TextView
+			android:id="@+id/video_channel"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@+id/video_title"
+			android:layout_marginTop="4dp"
+			android:layout_toEndOf="@+id/video_thumbnail"
+			android:layout_toRightOf="@+id/video_thumbnail"
+			android:layout_toStartOf="@id/video_options"
+			android:fontFamily="sans-serif-light"
+			android:text="Channel Name"
+			android:textColor="#ddd"
+			android:textSize="12sp"
+			/>
+
+		<ImageView
+			android:id="@+id/video_options"
+			android:layout_width="24dp"
+			android:layout_height="24dp"
+			android:layout_alignParentEnd="true"
+			android:layout_marginTop="5dp"
+			android:background="@drawable/ripple_borderless"
+			android:clickable="true"
+			android:src="@drawable/more"
+			/>
+
+	</RelativeLayout>
+</FrameLayout>
